@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MCP Q&A Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0e7ff 0%, #f1f8e9 100%);
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    h1 {
+      margin-top: 2rem;
+      color: #3b3b5c;
+      letter-spacing: 1px;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+    #chat-container {
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(60,60,100,0.08);
+      border-radius: 18px;
+      width: 100%;
+      max-width: 480px;
+      margin: 2rem 0 1rem 0;
+      padding: 2rem 1.5rem 1rem 1.5rem;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .bubble {
+      max-width: 80%;
+      padding: 1rem 1.2rem;
+      border-radius: 16px;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      word-break: break-word;
+      box-shadow: 0 2px 8px rgba(60,60,100,0.04);
+      position: relative;
+      animation: fadeIn 0.3s;
+    }
+    .user {
+      background: linear-gradient(90deg, #a5b4fc 0%, #c7d2fe 100%);
+      color: #222;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+    .bot {
+      background: linear-gradient(90deg, #d1fae5 0%, #f0fdf4 100%);
+      color: #234d20;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+    #askForm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      max-width: 480px;
+      margin-bottom: 2rem;
+    }
+    #question {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      border: 1px solid #bdbdbd;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    #question:focus {
+      border: 1.5px solid #6366f1;
+    }
+    button[type="submit"] {
+      background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(60,60,100,0.08);
+      transition: background 0.2s, transform 0.1s;
+    }
+    button[type="submit"]:hover {
+      background: linear-gradient(90deg, #818cf8 0%, #38bdf8 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .loader {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border: 3px solid #a5b4fc;
+      border-top: 3px solid #6366f1;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0.5rem auto 0.5rem 0.5rem;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      #chat-container, #askForm {
+        max-width: 98vw;
+        padding: 1rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>MCP Q&A Chatbot</h1>
+  <div id="chat-container"></div>
+  <form id="askForm" autocomplete="off">
+    <input id="question" type="text" placeholder="Ask about MCP..." required />
+    <button type="submit">Ask</button>
+  </form>
+  <script>
+    const chat = document.getElementById('chat-container');
+    const form = document.getElementById('askForm');
+    const input = document.getElementById('question');
+    let loading = false;
+
+    function addBubble(text, who) {
+      const div = document.createElement('div');
+      div.className = `bubble ${who}`;
+      div.innerText = text;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function addLoader() {
+      const loader = document.createElement('div');
+      loader.className = 'loader';
+      loader.id = 'loader';
+      chat.appendChild(loader);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function removeLoader() {
+      const loader = document.getElementById('loader');
+      if (loader) loader.remove();
+    }
+
+    form.onsubmit = async (e) => {
+      e.preventDefault();
+      if (loading) return;
+      const q = input.value.trim();
+      if (!q) return;
+      addBubble(q, 'user');
+      input.value = '';
+      loading = true;
+      addLoader();
+      try {
+        const res = await fetch('http://localhost:3001/api/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: q })
+        });
+        const data = await res.json();
+        removeLoader();
+        addBubble(data.answer, 'bot');
+      } catch (err) {
+        removeLoader();
+        addBubble('Error: Could not get a response. Please try again.', 'bot');
+      }
+      loading = false;
+    };
+  </script>
+</body>
+</html> 
