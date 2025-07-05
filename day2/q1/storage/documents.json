@@ -1,0 +1,1088 @@
+{
+  "documents": [
+    {
+      "id": "ea8f556b-3efc-48f4-9d53-07d4a6477c28",
+      "title": "Welcome to Our Blog",
+      "content": "Welcome to our amazing blog! Here you'll find interesting articles about technology, science, and more. We hope you enjoy reading our content!",
+      "metadata": {
+        "author": "John Doe",
+        "category": "blog",
+        "date_created": "2025-07-05T13:23:19.678620",
+        "source": "manual",
+        "tags": [
+          "welcome",
+          "introduction",
+          "blog"
+        ]
+      },
+      "stats": {
+        "word_count": 22,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 142,
+        "avg_words_per_sentence": 7.333333333333333
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.0,
+          "subjectivity": 0.0,
+          "confidence": 0.0
+        },
+        "keywords": [],
+        "readability": {
+          "flesch_score": 0.0,
+          "grade_level": "Unknown",
+          "flesch_kincaid_grade": 0.0,
+          "reading_time_minutes": 0.0
+        },
+        "analysis_date": "2025-07-05T13:23:19.678716"
+      }
+    },
+    {
+      "id": "fd386956-e993-4edb-b25f-1f66bdb073f3",
+      "title": "Python Programming Guide",
+      "content": "Python is a powerful programming language. It's easy to learn and has many applications. In this guide, we'll explore the basics of Python programming.",
+      "metadata": {
+        "author": "Jane Smith",
+        "category": "technical",
+        "date_created": "2025-07-05T13:23:19.678771",
+        "source": "manual",
+        "tags": [
+          "python",
+          "programming",
+          "tutorial"
+        ]
+      },
+      "stats": {
+        "word_count": 24,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 151,
+        "avg_words_per_sentence": 8.0
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.0,
+          "subjectivity": 0.0,
+          "confidence": 0.0
+        },
+        "keywords": [],
+        "readability": {
+          "flesch_score": 0.0,
+          "grade_level": "Unknown",
+          "flesch_kincaid_grade": 0.0,
+          "reading_time_minutes": 0.0
+        },
+        "analysis_date": "2025-07-05T13:23:19.678832"
+      }
+    },
+    {
+      "id": "e447a9ce-1cbd-4a48-b67f-bd825d833378",
+      "title": "Movie Review: The Great Adventure",
+      "content": "The Great Adventure is an exciting movie! The plot was engaging and the characters were well-developed. I highly recommend this film to anyone who enjoys action movies.",
+      "metadata": {
+        "author": "Bob Wilson",
+        "category": "review",
+        "date_created": "2025-07-05T13:23:19.678855",
+        "source": "manual",
+        "tags": [
+          "movie",
+          "review",
+          "action"
+        ]
+      },
+      "stats": {
+        "word_count": 27,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 168,
+        "avg_words_per_sentence": 9.0
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.0,
+          "subjectivity": 0.0,
+          "confidence": 0.0
+        },
+        "keywords": [],
+        "readability": {
+          "flesch_score": 0.0,
+          "grade_level": "Unknown",
+          "flesch_kincaid_grade": 0.0,
+          "reading_time_minutes": 0.0
+        },
+        "analysis_date": "2025-07-05T13:23:19.678877"
+      }
+    },
+    {
+      "id": "daf1079d-5178-4cb3-9260-b8c0844ca1a9",
+      "title": "Python Programming Tutorial",
+      "content": "Python is an amazing programming language! It's easy to learn and incredibly powerful. Python is used in web development, data science, artificial intelligence, and automation. Many developers love Python because of its simple syntax and extensive libraries.",
+      "metadata": {
+        "author": "Alice Johnson",
+        "category": "technical",
+        "date_created": "2025-07-05T13:33:41.134442",
+        "source": "manual",
+        "tags": [
+          "python",
+          "programming",
+          "tutorial"
+        ]
+      },
+      "stats": {
+        "word_count": 37,
+        "sentence_count": 4,
+        "paragraph_count": 1,
+        "char_count": 258,
+        "avg_words_per_sentence": 9.25
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.23541666666666672,
+          "subjectivity": 0.6904761904761904,
+          "confidence": 0.23541666666666672
+        },
+        "keywords": [
+          "python",
+          "amazing",
+          "programming",
+          "language",
+          "easy",
+          "learn",
+          "incredibly",
+          "powerful",
+          "used",
+          "web"
+        ],
+        "readability": {
+          "flesch_score": 36.66,
+          "grade_level": "College level (Difficult)",
+          "flesch_kincaid_grade": 10.5,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:33:41.134553"
+      }
+    },
+    {
+      "id": "34b3fc33-ecb9-4ad3-833c-f9b3c0479a71",
+      "title": "New AI Breakthrough Announced",
+      "content": "Scientists at MIT have announced a major breakthrough in artificial intelligence research. The new algorithm can process natural language with unprecedented accuracy, potentially revolutionizing how we interact with computers. The research team spent three years developing this technology, which could have applications in healthcare, education, and customer service.",
+      "metadata": {
+        "author": "Sarah Chen",
+        "category": "news",
+        "date_created": "2025-07-05T13:35:04.723661",
+        "source": "manual",
+        "tags": [
+          "AI",
+          "technology",
+          "research",
+          "MIT"
+        ]
+      },
+      "stats": {
+        "word_count": 48,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 368,
+        "avg_words_per_sentence": 16.0
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.028409090909090905,
+          "subjectivity": 0.6220779220779219,
+          "confidence": 0.028409090909090905
+        },
+        "keywords": [
+          "research",
+          "scientists",
+          "mit",
+          "announced",
+          "major",
+          "breakthrough",
+          "artificial",
+          "intelligence",
+          "algorithm",
+          "process"
+        ],
+        "readability": {
+          "flesch_score": 12.94,
+          "grade_level": "Graduate level (Very Difficult)",
+          "flesch_kincaid_grade": 15.4,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:04.723756"
+      }
+    },
+    {
+      "id": "4336ab93-e44e-461e-bfb2-229b24791079",
+      "title": "Climate Change Summit Reaches Agreement",
+      "content": "World leaders have reached a historic agreement on climate change action. The summit concluded with commitments to reduce carbon emissions by 50% within the next decade. Environmental groups are cautiously optimistic about the agreement, though some critics argue the measures don't go far enough.",
+      "metadata": {
+        "author": "Michael Rodriguez",
+        "category": "news",
+        "date_created": "2025-07-05T13:35:04.857839",
+        "source": "manual",
+        "tags": [
+          "climate",
+          "environment",
+          "politics",
+          "international"
+        ]
+      },
+      "stats": {
+        "word_count": 44,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 297,
+        "avg_words_per_sentence": 14.666666666666666
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.04,
+          "subjectivity": 0.32,
+          "confidence": 0.04
+        },
+        "keywords": [
+          "agreement",
+          "leaders",
+          "reached",
+          "historic",
+          "climate",
+          "change",
+          "action",
+          "summit",
+          "concluded",
+          "commitments"
+        ],
+        "readability": {
+          "flesch_score": 56.55,
+          "grade_level": "10th-12th grade (Fairly Difficult)",
+          "flesch_kincaid_grade": 9.0,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:04.857888"
+      }
+    },
+    {
+      "id": "60262fba-c3cb-4d27-9408-f52e9744874f",
+      "title": "Stock Market Hits Record High",
+      "content": "The stock market closed at a record high today, driven by strong earnings reports from major technology companies. Investors are optimistic about the economic outlook, with many analysts predicting continued growth in the coming months. However, some experts warn that the market may be overvalued.",
+      "metadata": {
+        "author": "Jennifer Park",
+        "category": "news",
+        "date_created": "2025-07-05T13:35:04.915001",
+        "source": "manual",
+        "tags": [
+          "finance",
+          "stocks",
+          "economy",
+          "technology"
+        ]
+      },
+      "stats": {
+        "word_count": 45,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 298,
+        "avg_words_per_sentence": 15.0
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.20930555555555555,
+          "subjectivity": 0.42888888888888893,
+          "confidence": 0.20930555555555555
+        },
+        "keywords": [
+          "market",
+          "stock",
+          "closed",
+          "record",
+          "today",
+          "driven",
+          "strong",
+          "earnings",
+          "reports",
+          "major"
+        ],
+        "readability": {
+          "flesch_score": 47.79,
+          "grade_level": "College level (Difficult)",
+          "flesch_kincaid_grade": 10.3,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:04.915065"
+      }
+    },
+    {
+      "id": "1df0c2f7-cc78-41fa-915c-14f60fb360ab",
+      "title": "My Journey Learning Python",
+      "content": "I started learning Python six months ago, and it's been an amazing journey! At first, I was intimidated by programming, but Python's simple syntax made it much more approachable. I've built several projects, including a web scraper and a simple game. The Python community is incredibly supportive and welcoming to beginners.",
+      "metadata": {
+        "author": "Alex Thompson",
+        "category": "blog",
+        "date_created": "2025-07-05T13:35:05.002330",
+        "source": "manual",
+        "tags": [
+          "python",
+          "programming",
+          "learning",
+          "personal"
+        ]
+      },
+      "stats": {
+        "word_count": 51,
+        "sentence_count": 4,
+        "paragraph_count": 1,
+        "char_count": 324,
+        "avg_words_per_sentence": 12.75
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.2,
+          "subjectivity": 0.48095238095238096,
+          "confidence": 0.2
+        },
+        "keywords": [
+          "python",
+          "simple",
+          "started",
+          "learning",
+          "six",
+          "months",
+          "ago",
+          "amazing",
+          "journey",
+          "intimidated"
+        ],
+        "readability": {
+          "flesch_score": 58.48,
+          "grade_level": "10th-12th grade (Fairly Difficult)",
+          "flesch_kincaid_grade": 8.3,
+          "reading_time_minutes": 0.3
+        },
+        "analysis_date": "2025-07-05T13:35:05.002456"
+      }
+    },
+    {
+      "id": "34b167bc-8a87-422a-a7d9-69f2ba62d0f7",
+      "title": "The Best Coffee Shops in Seattle",
+      "content": "Seattle is famous for its coffee culture, and after living here for five years, I've discovered some hidden gems. My favorite is Victrola Coffee on Capitol Hill - their espresso is incredible and the atmosphere is perfect for working. Another great spot is Analog Coffee, which has the best pastries in the city.",
+      "metadata": {
+        "author": "Emma Wilson",
+        "category": "blog",
+        "date_created": "2025-07-05T13:35:05.064088",
+        "source": "manual",
+        "tags": [
+          "coffee",
+          "Seattle",
+          "food",
+          "lifestyle"
+        ]
+      },
+      "stats": {
+        "word_count": 53,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 312,
+        "avg_words_per_sentence": 17.666666666666668
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.6476190476190476,
+          "subjectivity": 0.7547619047619046,
+          "confidence": 0.6476190476190476
+        },
+        "keywords": [
+          "coffee",
+          "seattle",
+          "famous",
+          "culture",
+          "living",
+          "five",
+          "years",
+          "discovered",
+          "hidden",
+          "gems"
+        ],
+        "readability": {
+          "flesch_score": 62.38,
+          "grade_level": "8th-9th grade (Standard)",
+          "flesch_kincaid_grade": 8.9,
+          "reading_time_minutes": 0.3
+        },
+        "analysis_date": "2025-07-05T13:35:05.064204"
+      }
+    },
+    {
+      "id": "eebd843b-9034-4d83-9dfd-090a46d5b8b3",
+      "title": "Tips for Remote Work Success",
+      "content": "Working from home can be challenging, but with the right strategies, it can be incredibly productive. I've learned to create a dedicated workspace, establish clear boundaries between work and personal time, and maintain regular communication with my team. The key is finding what works best for your personality and work style.",
+      "metadata": {
+        "author": "David Lee",
+        "category": "blog",
+        "date_created": "2025-07-05T13:35:05.125977",
+        "source": "manual",
+        "tags": [
+          "remote work",
+          "productivity",
+          "tips",
+          "career"
+        ]
+      },
+      "stats": {
+        "word_count": 51,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 327,
+        "avg_words_per_sentence": 17.0
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.3482142857142857,
+          "subjectivity": 0.5619963369963369,
+          "confidence": 0.3482142857142857
+        },
+        "keywords": [
+          "working",
+          "home",
+          "challenging",
+          "strategies",
+          "incredibly",
+          "productive",
+          "learned",
+          "create",
+          "dedicated",
+          "workspace"
+        ],
+        "readability": {
+          "flesch_score": 54.22,
+          "grade_level": "10th-12th grade (Fairly Difficult)",
+          "flesch_kincaid_grade": 9.9,
+          "reading_time_minutes": 0.3
+        },
+        "analysis_date": "2025-07-05T13:35:05.126082"
+      }
+    },
+    {
+      "id": "ffbaaca7-023e-4c45-a7b8-100c8544e0a1",
+      "title": "REST API Documentation",
+      "content": "This API provides access to user data and authentication services. All endpoints require authentication via API key. The base URL is https://api.example.com/v1/. Rate limiting is enforced at 1000 requests per hour per API key. All responses are returned in JSON format with standard HTTP status codes.",
+      "metadata": {
+        "author": "Dev Team",
+        "category": "technical",
+        "date_created": "2025-07-05T13:35:05.208579",
+        "source": "manual",
+        "tags": [
+          "API",
+          "documentation",
+          "REST",
+          "development"
+        ]
+      },
+      "stats": {
+        "word_count": 46,
+        "sentence_count": 7,
+        "paragraph_count": 1,
+        "char_count": 301,
+        "avg_words_per_sentence": 6.571428571428571
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "negative",
+          "polarity": -0.2,
+          "subjectivity": 0.75,
+          "confidence": 0.2
+        },
+        "keywords": [
+          "api",
+          "authentication",
+          "key",
+          "per",
+          "provides",
+          "access",
+          "user",
+          "data",
+          "services",
+          "endpoints"
+        ],
+        "readability": {
+          "flesch_score": 62.14,
+          "grade_level": "8th-9th grade (Standard)",
+          "flesch_kincaid_grade": 6.9,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:05.208634"
+      }
+    },
+    {
+      "id": "33765e57-e23a-4578-b7db-776575743de8",
+      "title": "Database Schema Design",
+      "content": "The database schema consists of five main tables: users, products, orders, order_items, and categories. Foreign key relationships maintain data integrity. Indexes are implemented on frequently queried columns to optimize performance. The schema supports both MySQL and PostgreSQL databases.",
+      "metadata": {
+        "author": "Database Team",
+        "category": "technical",
+        "date_created": "2025-07-05T13:35:05.259481",
+        "source": "manual",
+        "tags": [
+          "database",
+          "schema",
+          "design",
+          "SQL"
+        ]
+      },
+      "stats": {
+        "word_count": 38,
+        "sentence_count": 4,
+        "paragraph_count": 1,
+        "char_count": 290,
+        "avg_words_per_sentence": 9.5
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.035416666666666666,
+          "subjectivity": 0.4395833333333333,
+          "confidence": 0.035416666666666666
+        },
+        "keywords": [
+          "schema",
+          "database",
+          "consists",
+          "five",
+          "main",
+          "tables",
+          "users",
+          "products",
+          "orders",
+          "categories"
+        ],
+        "readability": {
+          "flesch_score": 44.91,
+          "grade_level": "College level (Difficult)",
+          "flesch_kincaid_grade": 9.4,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:05.259576"
+      }
+    },
+    {
+      "id": "e84d2b79-0987-4401-ae2d-9ff7ac734b6e",
+      "title": "The Last Library",
+      "content": "In a world where books had become obsolete, Maria discovered the last library hidden beneath the city. Dust motes danced in the filtered sunlight as she walked between towering shelves filled with forgotten stories. Each book held memories of a time when words on paper could transport readers to other worlds. She picked up a worn novel and began to read, feeling the magic that technology had almost erased.",
+      "metadata": {
+        "author": "Rachel Green",
+        "category": "creative",
+        "date_created": "2025-07-05T13:35:05.349167",
+        "source": "manual",
+        "tags": [
+          "fiction",
+          "short story",
+          "library",
+          "books"
+        ]
+      },
+      "stats": {
+        "word_count": 69,
+        "sentence_count": 4,
+        "paragraph_count": 1,
+        "char_count": 409,
+        "avg_words_per_sentence": 17.25
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.12166666666666667,
+          "subjectivity": 0.5349999999999999,
+          "confidence": 0.12166666666666667
+        },
+        "keywords": [
+          "books",
+          "become",
+          "obsolete",
+          "maria",
+          "discovered",
+          "last",
+          "library",
+          "hidden",
+          "beneath",
+          "city"
+        ],
+        "readability": {
+          "flesch_score": 70.84,
+          "grade_level": "7th grade (Fairly Easy)",
+          "flesch_kincaid_grade": 7.7,
+          "reading_time_minutes": 0.3
+        },
+        "analysis_date": "2025-07-05T13:35:05.349258"
+      }
+    },
+    {
+      "id": "37ac89dd-e41f-4aa7-a0d5-75370a8684ce",
+      "title": "Morning Coffee Haiku",
+      "content": "Steam rises gently / From my morning coffee cup / Peace before the day",
+      "metadata": {
+        "author": "James Kim",
+        "category": "creative",
+        "date_created": "2025-07-05T13:35:05.408127",
+        "source": "manual",
+        "tags": [
+          "poetry",
+          "haiku",
+          "coffee",
+          "morning"
+        ]
+      },
+      "stats": {
+        "word_count": 14,
+        "sentence_count": 1,
+        "paragraph_count": 1,
+        "char_count": 70,
+        "avg_words_per_sentence": 14.0
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.2,
+          "subjectivity": 0.8,
+          "confidence": 0.2
+        },
+        "keywords": [
+          "steam",
+          "rises",
+          "gently",
+          "morning",
+          "coffee",
+          "cup",
+          "peace"
+        ],
+        "readability": {
+          "flesch_score": 76.22,
+          "grade_level": "7th grade (Fairly Easy)",
+          "flesch_kincaid_grade": 5.6,
+          "reading_time_minutes": 0.1
+        },
+        "analysis_date": "2025-07-05T13:35:05.408172"
+      }
+    },
+    {
+      "id": "929d2fd4-2818-4385-acf0-faaf0b292813",
+      "title": "Machine Learning Applications in Healthcare",
+      "content": "This paper examines the implementation of machine learning algorithms in medical diagnosis and treatment planning. We analyze three case studies where ML models achieved diagnostic accuracy comparable to human specialists. The methodology involved training convolutional neural networks on medical imaging data from 10,000 patients. Results indicate significant potential for improving healthcare outcomes while reducing costs.",
+      "metadata": {
+        "author": "Dr. Lisa Anderson",
+        "category": "academic",
+        "date_created": "2025-07-05T13:35:05.475243",
+        "source": "manual",
+        "tags": [
+          "machine learning",
+          "healthcare",
+          "research",
+          "diagnosis"
+        ]
+      },
+      "stats": {
+        "word_count": 55,
+        "sentence_count": 4,
+        "paragraph_count": 1,
+        "char_count": 427,
+        "avg_words_per_sentence": 13.75
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.075,
+          "subjectivity": 0.395,
+          "confidence": 0.075
+        },
+        "keywords": [
+          "medical",
+          "paper",
+          "examines",
+          "implementation",
+          "machine",
+          "learning",
+          "algorithms",
+          "diagnosis",
+          "treatment",
+          "planning"
+        ],
+        "readability": {
+          "flesch_score": 6.71,
+          "grade_level": "Graduate level (Very Difficult)",
+          "flesch_kincaid_grade": 15.8,
+          "reading_time_minutes": 0.3
+        },
+        "analysis_date": "2025-07-05T13:35:05.475289"
+      }
+    },
+    {
+      "id": "8a4c63e8-fe13-4f8d-a70a-99490b231eb0",
+      "title": "Sustainable Energy Solutions",
+      "content": "This research investigates renewable energy technologies and their potential for widespread adoption. We conducted a comprehensive analysis of solar, wind, and hydroelectric power systems across different geographical regions. Our findings suggest that a combination of these technologies could meet 80% of global energy demands within the next two decades.",
+      "metadata": {
+        "author": "Dr. Robert Martinez",
+        "category": "academic",
+        "date_created": "2025-07-05T13:35:05.637453",
+        "source": "manual",
+        "tags": [
+          "renewable energy",
+          "sustainability",
+          "research",
+          "environment"
+        ]
+      },
+      "stats": {
+        "word_count": 49,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 357,
+        "avg_words_per_sentence": 16.333333333333332
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.0,
+          "subjectivity": 0.4,
+          "confidence": 0.0
+        },
+        "keywords": [
+          "energy",
+          "technologies",
+          "research",
+          "investigates",
+          "renewable",
+          "potential",
+          "widespread",
+          "adoption",
+          "conducted",
+          "comprehensive"
+        ],
+        "readability": {
+          "flesch_score": 29.55,
+          "grade_level": "Graduate level (Very Difficult)",
+          "flesch_kincaid_grade": 13.2,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:05.637567"
+      }
+    },
+    {
+      "id": "29e002aa-4237-445a-a641-576056fe18b9",
+      "title": "Amazing Wireless Headphones",
+      "content": "These headphones exceeded all my expectations! The sound quality is crystal clear, and the noise cancellation is fantastic. I can wear them for hours without any discomfort. The battery life is incredible - I only need to charge them once a week. Highly recommend to anyone looking for premium audio experience.",
+      "metadata": {
+        "author": "Mark Johnson",
+        "category": "review",
+        "date_created": "2025-07-05T13:35:05.721002",
+        "source": "manual",
+        "tags": [
+          "headphones",
+          "audio",
+          "technology",
+          "positive"
+        ]
+      },
+      "stats": {
+        "word_count": 51,
+        "sentence_count": 5,
+        "paragraph_count": 1,
+        "char_count": 311,
+        "avg_words_per_sentence": 10.2
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.32666666666666666,
+          "subjectivity": 0.6872222222222222,
+          "confidence": 0.32666666666666666
+        },
+        "keywords": [
+          "headphones",
+          "exceeded",
+          "expectations",
+          "sound",
+          "quality",
+          "crystal",
+          "clear",
+          "noise",
+          "cancellation",
+          "fantastic"
+        ],
+        "readability": {
+          "flesch_score": 52.87,
+          "grade_level": "10th-12th grade (Fairly Difficult)",
+          "flesch_kincaid_grade": 8.4,
+          "reading_time_minutes": 0.3
+        },
+        "analysis_date": "2025-07-05T13:35:05.721148"
+      }
+    },
+    {
+      "id": "bc0e5c4b-818e-4863-b771-bb267fb408d0",
+      "title": "Disappointing Restaurant Experience",
+      "content": "Unfortunately, my experience at this restaurant was quite disappointing. The service was slow, and the food arrived cold. The staff seemed overwhelmed and inattentive. The prices were high for the quality offered. I've had much better experiences at other restaurants in the area and won't be returning.",
+      "metadata": {
+        "author": "Susan Davis",
+        "category": "review",
+        "date_created": "2025-07-05T13:35:05.784393",
+        "source": "manual",
+        "tags": [
+          "restaurant",
+          "food",
+          "service",
+          "negative"
+        ]
+      },
+      "stats": {
+        "word_count": 47,
+        "sentence_count": 5,
+        "paragraph_count": 1,
+        "char_count": 303,
+        "avg_words_per_sentence": 9.4
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "negative",
+          "polarity": -0.2092857142857143,
+          "subjectivity": 0.6450000000000001,
+          "confidence": 0.2092857142857143
+        },
+        "keywords": [
+          "unfortunately",
+          "experience",
+          "restaurant",
+          "quite",
+          "disappointing",
+          "service",
+          "slow",
+          "food",
+          "arrived",
+          "cold"
+        ],
+        "readability": {
+          "flesch_score": 61.93,
+          "grade_level": "8th-9th grade (Standard)",
+          "flesch_kincaid_grade": 7.0,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:05.784462"
+      }
+    },
+    {
+      "id": "f17645e7-22df-49b7-aa02-9bf51b94e805",
+      "title": "Beautiful Sunset Today",
+      "content": "Just witnessed the most incredible sunset! The sky was painted in shades of orange, pink, and purple. Sometimes nature reminds us to pause and appreciate the simple beauty around us. #sunset #nature #grateful",
+      "metadata": {
+        "author": "Instagram User",
+        "category": "social_media",
+        "date_created": "2025-07-05T13:35:05.849441",
+        "source": "manual",
+        "tags": [
+          "sunset",
+          "nature",
+          "photography",
+          "gratitude"
+        ]
+      },
+      "stats": {
+        "word_count": 33,
+        "sentence_count": 3,
+        "paragraph_count": 1,
+        "char_count": 208,
+        "avg_words_per_sentence": 11.0
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "positive",
+          "polarity": 0.35,
+          "subjectivity": 0.5142857142857142,
+          "confidence": 0.35
+        },
+        "keywords": [
+          "sunset",
+          "nature",
+          "witnessed",
+          "incredible",
+          "sky",
+          "painted",
+          "shades",
+          "orange",
+          "pink",
+          "purple"
+        ],
+        "readability": {
+          "flesch_score": 63.05,
+          "grade_level": "8th-9th grade (Standard)",
+          "flesch_kincaid_grade": 6.5,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:05.849625"
+      }
+    },
+    {
+      "id": "1f9df34f-1c16-4edb-a7a4-18baf2d46f54",
+      "title": "New Recipe Success",
+      "content": "Finally nailed that chocolate cake recipe I've been working on! Third time's the charm. The secret ingredient was a pinch of sea salt. Can't wait to share it with friends this weekend. #baking #chocolate #success",
+      "metadata": {
+        "author": "Food Blogger",
+        "category": "social_media",
+        "date_created": "2025-07-05T13:35:05.942371",
+        "source": "manual",
+        "tags": [
+          "baking",
+          "recipe",
+          "chocolate",
+          "cooking"
+        ]
+      },
+      "stats": {
+        "word_count": 35,
+        "sentence_count": 4,
+        "paragraph_count": 1,
+        "char_count": 212,
+        "avg_words_per_sentence": 8.75
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": -0.02500000000000001,
+          "subjectivity": 0.425,
+          "confidence": 0.02500000000000001
+        },
+        "keywords": [
+          "chocolate",
+          "finally",
+          "nailed",
+          "cake",
+          "recipe",
+          "working",
+          "third",
+          "charm",
+          "secret",
+          "ingredient"
+        ],
+        "readability": {
+          "flesch_score": 89.75,
+          "grade_level": "6th grade (Easy)",
+          "flesch_kincaid_grade": 2.5,
+          "reading_time_minutes": 0.2
+        },
+        "analysis_date": "2025-07-05T13:35:05.942511"
+      }
+    },
+    {
+      "id": "c3879a54-15e6-4f7a-88e2-8a85f9adb834",
+      "title": "The Future of Quantum Computing",
+      "content": "Quantum computing represents a paradigm shift in computational technology. \n        Unlike classical computers that use bits, quantum computers use quantum bits \n        or qubits that can exist in multiple states simultaneously. This quantum \n        superposition allows quantum computers to perform certain calculations \n        exponentially faster than classical computers. The potential applications \n        include cryptography, drug discovery, and optimization problems.",
+      "metadata": {
+        "author": "Dr. Quantum Smith",
+        "category": "academic",
+        "date_created": "2025-07-05T13:36:15.523188",
+        "source": "manual",
+        "tags": [
+          "quantum",
+          "computing",
+          "technology",
+          "research"
+        ]
+      },
+      "stats": {
+        "word_count": 54,
+        "sentence_count": 4,
+        "paragraph_count": 1,
+        "char_count": 479,
+        "avg_words_per_sentence": 13.5
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.04285714285714286,
+          "subjectivity": 0.3142857142857143,
+          "confidence": 0.04285714285714286
+        },
+        "keywords": [
+          "quantum",
+          "computers",
+          "classical",
+          "bits",
+          "computing",
+          "represents",
+          "paradigm",
+          "shift"
+        ],
+        "readability": {
+          "flesch_score": -1.46,
+          "grade_level": "Graduate level (Very Difficult)",
+          "flesch_kincaid_grade": 16.8,
+          "reading_time_minutes": 0.3
+        },
+        "analysis_date": "2025-07-05T13:36:15.523289"
+      }
+    },
+    {
+      "id": "8a72f6b4-7eda-4b0d-a09f-a018ba7c1c22",
+      "title": "AI Assistant Created Document",
+      "content": "This document was created by an AI assistant to demonstrate the MCP connection. It shows how AI can interact with our document analysis tools through the Model Context Protocol.",
+      "metadata": {
+        "author": "AI Assistant",
+        "category": "demo",
+        "date_created": "2025-07-05T13:41:27.801559",
+        "source": "manual",
+        "tags": [
+          "AI",
+          "MCP",
+          "demo"
+        ]
+      },
+      "stats": {
+        "word_count": 29,
+        "sentence_count": 2,
+        "paragraph_count": 1,
+        "char_count": 177,
+        "avg_words_per_sentence": 14.5
+      },
+      "analysis": {
+        "sentiment": {
+          "label": "neutral",
+          "polarity": 0.0,
+          "subjectivity": 0.0,
+          "confidence": 0.0
+        },
+        "keywords": [
+          "document",
+          "created",
+          "assistant",
+          "demonstrate",
+          "mcp",
+          "connection",
+          "shows",
+          "interact",
+          "analysis",
+          "tools"
+        ],
+        "readability": {
+          "flesch_score": 48.3,
+          "grade_level": "College level (Difficult)",
+          "flesch_kincaid_grade": 10.1,
+          "reading_time_minutes": 0.1
+        },
+        "analysis_date": "2025-07-05T13:41:27.801625"
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-07-05T13:23:19.677298",
+    "last_updated": "2025-07-05T13:41:27.907900",
+    "total_documents": 22
+  }
+}

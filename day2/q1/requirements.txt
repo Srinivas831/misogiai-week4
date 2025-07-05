@@ -1,0 +1,23 @@
+# Document Analyzer MCP Server Requirements
+# 
+# Think of this like a shopping list for Python packages (libraries)
+# Each package gives us special powers:
+
+# MCP (Model Context Protocol) - Allows AI assistants to talk to our server
+mcp==1.0.0
+
+# Natural Language Processing (NLP) Libraries
+# These help us understand and analyze text:
+nltk==3.8.1          # Natural Language Toolkit - tokenization, stop words
+textblob==0.17.1      # Simple sentiment analysis and text processing  
+textstat==0.7.3       # Readability scoring (how easy text is to read)
+
+# Optional: More advanced NLP (we might use this later)
+# spacy==3.7.2        # Advanced NLP library
+
+# Utility Libraries
+python-dotenv==1.0.0  # For environment variables (settings)
+
+# Development Tools
+pytest==7.4.3        # For testing our code
+black==23.12.0        # For making our code look nice and consistent 
