@@ -1,0 +1,45 @@
+[
+    {
+      "id": "u1",
+      "name": "Alice",
+      "timezone": "Asia/Kolkata",
+      "work_hours": ["09:00", "17:00"],
+      "calendar": [
+        { "start": "2025-07-06T10:00", "end": "2025-07-06T11:00" }
+      ]
+    },
+    
+    {
+      "id": "u2",
+      "name": "Bob",
+      "timezone": "Europe/London",
+      "work_hours": ["08:00", "16:00"],
+      "calendar": []
+    },
+    {
+      "id": "u3",
+      "name": "Charlie",
+      "timezone": "America/New_York",
+      "work_hours": ["09:00", "17:00"],
+      "calendar": [
+        { "start": "2025-07-06T15:00", "end": "2025-07-06T16:00" }
+      ]
+    },
+    {
+      "id": "u4",
+      "name": "Diana",
+      "timezone": "Asia/Tokyo",
+      "work_hours": ["10:00", "18:00"],
+      "calendar": [
+        { "start": "2025-07-06T11:00", "end": "2025-07-06T12:00" }
+      ]
+    },
+    {
+      "id": "u5",
+      "name": "Ethan",
+      "timezone": "Australia/Sydney",
+      "work_hours": ["08:00", "16:00"],
+      "calendar": []
+    }
+  ]
+  

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "m1",
+    "title": "Weekly Sync",
+    "participants": [
+      "u1",
+      "u2"
+    ],
+    "start": "2025-07-06T10:00",
+    "end": "2025-07-06T11:00"
+  },
+  {
+    "id": "m2",
+    "title": "Product Brainstorm",
+    "participants": [
+      "u1",
+      "u3",
+      "u4"
+    ],
+    "start": "2025-07-05T15:00",
+    "end": "2025-07-05T16:30"
+  },
+  {
+    "id": "m3",
+    "title": "Team Retrospective",
+    "participants": [
+      "u2",
+      "u4",
+      "u5"
+    ],
+    "start": "2025-07-04T11:00",
+    "end": "2025-07-04T12:00"
+  },
+  {
+    "id": "m6e20da",
+    "title": "Test Meeting",
+    "participants": [
+      "Alice",
+      "Bob"
+    ],
+    "start": "2024-12-10T09:00:00",
+    "end": "2024-12-10T09:30:00"
+  },
+  {
+    "id": "mb9ab7c",
+    "title": "Original testing meet",
+    "participants": [
+      "Diana",
+      "Charlie"
+    ],
+    "start": "2025-07-07T09:00:00",
+    "end": "2025-07-07T09:30:00"
+  },
+  {
+    "id": "mf22d89",
+    "title": "MCP Demo",
+    "participants": [
+      "Charlie",
+      "Diana"
+    ],
+    "start": "2025-12-11T14:00:00",
+    "end": "2025-12-11T14:45:00"
+  },
+  {
+    "id": "m4d56cf",
+    "title": "MCP Demo",
+    "participants": [
+      "Alice"
+    ],
+    "start": "2024-12-12T10:00:00",
+    "end": "2024-12-12T10:30:00"
+  },
+  {
+    "id": "m6f247f",
+    "title": "Meet with AI client",
+    "participants": [
+      "Diana",
+      "Charlie"
+    ],
+    "start": "2025-08-04T09:00:00",
+    "end": "2025-08-04T09:30:00"
+  }
+]
