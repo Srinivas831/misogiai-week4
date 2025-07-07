@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord MCP Server Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .tool-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        
+        .tool-section h2 {
+            color: #5865f2;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background: #5865f2;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #4752c4;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .result {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            min-height: 60px;
+            border: 2px solid #ddd;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        
+        .error {
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        
+        .info {
+            background: #e2e3e5;
+            border-color: #d6d8db;
+            color: #383d41;
+        }
+        
+        .status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        
+        .status.connected {
+            background: #28a745;
+            color: white;
+        }
+        
+        .status.disconnected {
+            background: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="status" id="status">🔄 Connecting...</div>
+    
+    <div class="container">
+        <h1>🎮 Discord MCP Server Test</h1>
+        
+        <!-- Send Message Tool -->
+        <div class="tool-section">
+            <h2>📤 Send Message</h2>
+            <div class="form-group">
+                <label for="sendChannel">Channel:</label>
+                <input type="text" id="sendChannel" placeholder="general" value="general">
+            </div>
+            <div class="form-group">
+                <label for="sendMessage">Message:</label>
+                <textarea id="sendMessage" rows="3" placeholder="Hello from MCP test!"></textarea>
+            </div>
+            <button onclick="sendMessage()">Send Message</button>
+            <div id="sendResult" class="result info">Ready to send message...</div>
+        </div>
+        
+        <!-- Get Messages Tool -->
+        <div class="tool-section">
+            <h2>📥 Get Messages</h2>
+            <div class="form-group">
+                <label for="getChannel">Channel:</label>
+                <input type="text" id="getChannel" placeholder="general" value="general">
+            </div>
+            <div class="form-group">
+                <label for="getLimit">Limit:</label>
+                <input type="number" id="getLimit" min="1" max="50" value="5">
+            </div>
+            <button onclick="getMessages()">Get Messages</button>
+            <div id="getResult" class="result info">Ready to get messages...</div>
+        </div>
+        
+        <!-- Get Channel Info Tool -->
+        <div class="tool-section">
+            <h2>ℹ️ Get Channel Info</h2>
+            <div class="form-group">
+                <label for="infoChannel">Channel:</label>
+                <input type="text" id="infoChannel" placeholder="general" value="general">
+            </div>
+            <button onclick="getChannelInfo()">Get Channel Info</button>
+            <div id="infoResult" class="result info">Ready to get channel info...</div>
+        </div>
+        
+        <!-- Test All Tools -->
+        <div class="tool-section">
+            <h2>🧪 Test All Tools</h2>
+            <button onclick="testAllTools()">Run All Tests</button>
+            <div id="testResult" class="result info">Ready to run tests...</div>
+        </div>
+    </div>
+
+    <script>
+        // MCP Server connection (we'll simulate this for now)
+        let mcpConnected = false;
+        
+        // Update status
+        function updateStatus(connected) {
+            const status = document.getElementById('status');
+            if (connected) {
+                status.textContent = '✅ MCP Connected';
+                status.className = 'status connected';
+                mcpConnected = true;
+            } else {
+                status.textContent = '❌ MCP Disconnected';
+                status.className = 'status disconnected';
+                mcpConnected = false;
+            }
+        }
+        
+        // Simulate MCP tool call
+        async function callMCPTool(toolName, args) {
+            if (!mcpConnected) {
+                throw new Error('MCP Server not connected');
+            }
+            
+            // For now, we'll simulate the calls
+            // In a real implementation, this would connect to the MCP server
+            const response = await fetch('/mcp-tool', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    tool: toolName,
+                    arguments: args
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            return await response.json();
+        }
+        
+        // Send Message
+        async function sendMessage() {
+            const channel = document.getElementById('sendChannel').value;
+            const message = document.getElementById('sendMessage').value;
+            const resultDiv = document.getElementById('sendResult');
+            
+            if (!channel || !message) {
+                resultDiv.textContent = '❌ Please fill in both channel and message';
+                resultDiv.className = 'result error';
+                return;
+            }
+            
+            try {
+                resultDiv.textContent = '🔄 Sending message...';
+                resultDiv.className = 'result info';
+                
+                const result = await callMCPTool('send_message', {
+                    channel: channel,
+                    message: message
+                });
+                
+                resultDiv.textContent = `✅ Success: ${result.content}`;
+                resultDiv.className = 'result success';
+            } catch (error) {
+                resultDiv.textContent = `❌ Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        // Get Messages
+        async function getMessages() {
+            const channel = document.getElementById('getChannel').value;
+            const limit = parseInt(document.getElementById('getLimit').value);
+            const resultDiv = document.getElementById('getResult');
+            
+            if (!channel) {
+                resultDiv.textContent = '❌ Please enter a channel name';
+                resultDiv.className = 'result error';
+                return;
+            }
+            
+            try {
+                resultDiv.textContent = '🔄 Getting messages...';
+                resultDiv.className = 'result info';
+                
+                const result = await callMCPTool('get_messages', {
+                    channel: channel,
+                    limit: limit
+                });
+                
+                resultDiv.textContent = `✅ Messages:\n${result.content}`;
+                resultDiv.className = 'result success';
+            } catch (error) {
+                resultDiv.textContent = `❌ Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        // Get Channel Info
+        async function getChannelInfo() {
+            const channel = document.getElementById('infoChannel').value;
+            const resultDiv = document.getElementById('infoResult');
+            
+            if (!channel) {
+                resultDiv.textContent = '❌ Please enter a channel name';
+                resultDiv.className = 'result error';
+                return;
+            }
+            
+            try {
+                resultDiv.textContent = '🔄 Getting channel info...';
+                resultDiv.className = 'result info';
+                
+                const result = await callMCPTool('get_channel_info', {
+                    channel: channel
+                });
+                
+                resultDiv.textContent = `✅ Channel Info:\n${result.content}`;
+                resultDiv.className = 'result success';
+            } catch (error) {
+                resultDiv.textContent = `❌ Error: ${error.message}`;
+                resultDiv.className = 'result error';
+            }
+        }
+        
+        // Test All Tools
+        async function testAllTools() {
+            const resultDiv = document.getElementById('testResult');
+            resultDiv.textContent = '🧪 Running all tests...\n';
+            resultDiv.className = 'result info';
+            
+            const tests = [
+                { name: 'Channel Info', func: () => callMCPTool('get_channel_info', { channel: 'general' }) },
+                { name: 'Get Messages', func: () => callMCPTool('get_messages', { channel: 'general', limit: 3 }) },
+                { name: 'Send Message', func: () => callMCPTool('send_message', { channel: 'general', message: 'Test from MCP Web Interface!' }) }
+            ];
+            
+            let results = '';
+            for (const test of tests) {
+                try {
+                    results += `\n🧪 Testing ${test.name}...\n`;
+                    const result = await test.func();
+                    results += `✅ ${test.name}: SUCCESS\n${result.content}\n`;
+                } catch (error) {
+                    results += `❌ ${test.name}: FAILED\n${error.message}\n`;
+                }
+            }
+            
+            resultDiv.textContent = `🧪 Test Results:\n${results}`;
+            resultDiv.className = 'result success';
+        }
+        
+        // Initialize
+        window.onload = function() {
+            // Try to connect to MCP server
+            setTimeout(() => {
+                updateStatus(true); // Simulate connection for now
+            }, 2000);
+        };
+    </script>
+</body>
+</html> 
