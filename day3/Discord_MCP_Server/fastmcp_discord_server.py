@@ -41,13 +41,13 @@ class DiscordClient:
         # Setup Discord events
         @self.client.event
         async def on_ready():
-            print(f"✅ Discord client ready: {self.client.user}")
-            print(f"📊 Connected to {len(self.client.guilds)} guilds")
+            print(f" Discord client ready: {self.client.user}")
+            print(f" Connected to {len(self.client.guilds)} guilds")
             self.ready.set()
         
         @self.client.event
         async def on_error(event, *args, **kwargs):
-            print(f"❌ Discord error in {event}: {args}")
+            print(f" Discord error in {event}: {args}")
     
     async def ensure_ready(self):
         """Ensure Discord client is ready"""
@@ -109,7 +109,7 @@ async def send_message(channel: str, message: str) -> str:
                 for ch in guild.text_channels:
                     available_channels.append(f"#{ch.name}")
             
-            result = f"❌ Channel '{channel}' not found.\n"
+            result = f" Channel '{channel}' not found.\n"
             result += f"Available channels: {', '.join(available_channels[:10])}"
             if len(available_channels) > 10:
                 result += f" and {len(available_channels) - 10} more..."
@@ -117,20 +117,20 @@ async def send_message(channel: str, message: str) -> str:
         
         # Check permissions
         if not target_channel.permissions_for(target_channel.guild.me).send_messages:
-            return f"❌ No permission to send messages in #{target_channel.name}"
+            return f" No permission to send messages in #{target_channel.name}"
         
         # Send the message
         sent_message = await target_channel.send(message)
-        return f"✅ Message sent to #{target_channel.name} in {target_channel.guild.name} (Message ID: {sent_message.id})"
+        return f" Message sent to #{target_channel.name} in {target_channel.guild.name} (Message ID: {sent_message.id})"
         
     except asyncio.TimeoutError:
-        return "❌ Discord client not ready (timeout)"
+        return "Discord client not ready (timeout)"
     except discord.Forbidden:
-        return f"❌ No permission to send messages in {channel}"
+        return f" No permission to send messages in {channel}"
     except discord.HTTPException as e:
-        return f"❌ Discord API error: {str(e)}"
+        return f" Discord API error: {str(e)}"
     except Exception as e:
-        return f"❌ Error sending message: {str(e)}"
+        return f" Error sending message: {str(e)}"
 
 @mcp.tool()
 async def get_messages(channel: str, limit: int = 10) -> str:
@@ -151,11 +151,11 @@ async def get_messages(channel: str, limit: int = 10) -> str:
         # Find the channel
         target_channel = await discord_client.find_channel(channel)
         if not target_channel:
-            return f"❌ Channel '{channel}' not found"
+            return f" Channel '{channel}' not found"
         
         # Check permissions
         if not target_channel.permissions_for(target_channel.guild.me).read_message_history:
-            return f"❌ No permission to read message history in #{target_channel.name}"
+            return f" No permission to read message history in #{target_channel.name}"
         
         # Get messages
         messages = []
@@ -167,18 +167,18 @@ async def get_messages(channel: str, limit: int = 10) -> str:
             messages.append(f"[{timestamp}] {message.author.display_name}: {content}")
         
         if not messages:
-            return f"📭 No messages found in #{target_channel.name}"
+            return f" No messages found in #{target_channel.name}"
         
-        result = f"📋 Last {len(messages)} messages from #{target_channel.name} ({target_channel.guild.name}):\n\n"
+        result = f" Last {len(messages)} messages from #{target_channel.name} ({target_channel.guild.name}):\n\n"
         result += "\n".join(reversed(messages))  # Show oldest first
         return result
         
     except asyncio.TimeoutError:
-        return "❌ Discord client not ready (timeout)"
+        return " Discord client not ready (timeout)"
     except discord.Forbidden:
-        return f"❌ No permission to read messages in {channel}"
+        return f" No permission to read messages in {channel}"
     except Exception as e:
-        return f"❌ Error getting messages: {str(e)}"
+        return f" Error getting messages: {str(e)}"
 
 @mcp.tool()
 async def get_channel_info(channel: str) -> str:
@@ -195,31 +195,31 @@ async def get_channel_info(channel: str) -> str:
         # Find the channel
         target_channel = await discord_client.find_channel(channel)
         if not target_channel:
-            return f"❌ Channel '{channel}' not found"
+            return f" Channel '{channel}' not found"
         
         # Gather channel info
-        info = f"📊 Channel Information for #{target_channel.name}\n\n"
-        info += f"🆔 Channel ID: {target_channel.id}\n"
-        info += f"📂 Channel Type: {target_channel.type}\n"
-        info += f"🏠 Server: {target_channel.guild.name} (ID: {target_channel.guild.id})\n"
-        info += f"📅 Created: {target_channel.created_at.strftime('%Y-%m-%d %H:%M:%S UTC')}\n"
+        info = f"Channel Information for #{target_channel.name}\n\n"
+        info += f" Channel ID: {target_channel.id}\n"
+        info += f" Channel Type: {target_channel.type}\n"
+        info += f" Server: {target_channel.guild.name} (ID: {target_channel.guild.id})\n"
+        info += f" Created: {target_channel.created_at.strftime('%Y-%m-%d %H:%M:%S UTC')}\n"
         
         if hasattr(target_channel, 'topic') and target_channel.topic:
-            info += f"📝 Topic: {target_channel.topic}\n"
+            info += f" Topic: {target_channel.topic}\n"
         
         if hasattr(target_channel, 'category') and target_channel.category:
-            info += f"📁 Category: {target_channel.category.name}\n"
+            info += f" Category: {target_channel.category.name}\n"
         
         # Member count
         member_count = len([m for m in target_channel.guild.members if target_channel.permissions_for(m).read_messages])
-        info += f"👥 Members with access: {member_count}\n"
+        info += f" Members with access: {member_count}\n"
         
         return info
         
     except asyncio.TimeoutError:
-        return "❌ Discord client not ready (timeout)"
+        return " Discord client not ready (timeout)"
     except Exception as e:
-        return f"❌ Error getting channel info: {str(e)}"
+        return f" Error getting channel info: {str(e)}"
 
 @mcp.tool()
 async def list_channels(server_name: str = "") -> str:
@@ -235,13 +235,13 @@ async def list_channels(server_name: str = "") -> str:
     try:
         await discord_client.ensure_ready()
         
-        result = "📋 Available Discord Channels:\n\n"
+        result = " Available Discord Channels:\n\n"
         
         for guild in discord_client.client.guilds:
             if server_name and server_name.lower() not in guild.name.lower():
                 continue
             
-            result += f"🏠 **{guild.name}** (ID: {guild.id})\n"
+            result += f" **{guild.name}** (ID: {guild.id})\n"
             
             # Group channels by category
             categories = {}
@@ -257,28 +257,28 @@ async def list_channels(server_name: str = "") -> str:
             
             # Show categorized channels
             for category_name, channels in categories.items():
-                result += f"  📁 {category_name}\n"
+                result += f"   {category_name}\n"
                 for channel in channels:
                     result += f"    #{channel.name} (ID: {channel.id})\n"
             
             # Show uncategorized channels
             if no_category:
-                result += f"  📂 No Category\n"
+                result += f"   No Category\n"
                 for channel in no_category:
                     result += f"    #{channel.name} (ID: {channel.id})\n"
             
             result += "\n"
         
         if not discord_client.client.guilds:
-            result += "❌ Bot is not connected to any Discord servers.\n"
+            result += " Bot is not connected to any Discord servers.\n"
             result += "Please invite the bot to your server first."
         
         return result
         
     except asyncio.TimeoutError:
-        return "❌ Discord client not ready (timeout)"
+        return " Discord client not ready (timeout)"
     except Exception as e:
-        return f"❌ Error listing channels: {str(e)}"
+        return f" Error listing channels: {str(e)}"
 
 @mcp.tool()
 async def discord_status() -> str:
@@ -290,13 +290,13 @@ async def discord_status() -> str:
     """
     try:
         if not discord_client.ready.is_set():
-            return "🔄 Discord client is connecting..."
+            return " Discord client is connecting..."
         
         client = discord_client.client
-        result = f"✅ Discord Bot Status:\n\n"
-        result += f"🤖 Bot: {client.user.name}#{client.user.discriminator}\n"
-        result += f"🆔 Bot ID: {client.user.id}\n"
-        result += f"🏠 Connected to {len(client.guilds)} servers:\n"
+        result = f" Discord Bot Status:\n\n"
+        result += f" Bot: {client.user.name}#{client.user.discriminator}\n"
+        result += f" Bot ID: {client.user.id}\n"
+        result += f" Connected to {len(client.guilds)} servers:\n"
         
         for guild in client.guilds:
             result += f"  • {guild.name} ({len(guild.text_channels)} channels)\n"
@@ -304,13 +304,13 @@ async def discord_status() -> str:
         return result
         
     except Exception as e:
-        return f"❌ Error getting Discord status: {str(e)}"
+        return f" Error getting Discord status: {str(e)}"
 
 # Main function to run the server
 def main():
     """Main function to run the FastMCP server"""
-    print("🚀 Starting Discord FastMCP Server...")
-    print(f"📋 Bot Token: {discord_client.bot_token[:20]}...")
+    print("Starting Discord FastMCP Server...")
+    print(f" Bot Token: {discord_client.bot_token[:20]}...")
     
     # Run FastMCP server (this handles the event loop)
     mcp.run()
@@ -319,8 +319,8 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n🛑 Server stopped by user")
+        print("\n Server stopped by user")
     except Exception as e:
-        print(f"❌ Server error: {e}")
+        print(f" Server error: {e}")
         import sys
         sys.exit(1) 
