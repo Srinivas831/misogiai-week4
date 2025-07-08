@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAG Chunking Visualizer</title>
+</head>
+<body>
+  <h1>Upload PDF</h1>
+  <input type="file" id="pdf" />
+  <button onclick="uploadPDF()">Upload</button>
+
+  <h2>Choose Chunking Strategy</h2>
+  <select id="strategy">
+    <option value="fixed">Fixed</option>
+    <option value="recursive">Recursive</option>
+    <option value="document">Document-based</option>
+    <option value="semantic">Semantic</option>
+  </select>
+  <button onclick="applyChunking()">Chunk</button>
+
+  <h2>Result</h2>
+  <pre id="output"></pre>
+
+  <script>
+    let extractedText = "";
+
+    async function uploadPDF() {
+      const file = document.getElementById('pdf').files[0];
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const res = await fetch('http://localhost:5000/api/upload', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      extractedText = data.text;
+      document.getElementById('output').innerText = 'Text extracted. Now choose strategy.';
+    }
+
+    async function applyChunking() {
+      const strategy = document.getElementById('strategy').value;
+
+      const res = await fetch('http://localhost:5000/api/chunk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: extractedText, strategy })
+      });
+
+      const data = await res.json();
+      document.getElementById('output').innerText = JSON.stringify(data.chunks, null, 2);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Flask
+flask-cors
+PyMuPDF
+nltk
+spacy
+scikit-learn
+joblib
+tqdm
+regex
