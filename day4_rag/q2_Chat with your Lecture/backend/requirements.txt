@@ -1,0 +1,22 @@
+# === LangChain Ecosystem ===
+langchain-core           # Base building blocks for chains and tools
+langchain-community      # Community-supported tools like parsers, loaders, etc.
+langchain-openai         # For using OpenAI models with LangChain
+
+# === Vector Store ===
+chromadb                 # Local vector DB to store and retrieve transcript chunks
+
+# === Transcription ===
+whisper                  # OpenAI's local Whisper model for transcribing audio (2–3 hr lectures)
+
+# === Env Config ===
+python-dotenv            # For loading API keys from .env file
+
+# === Video/Audio Processing ===
+moviepy                  # For extracting audio from video (e.g., .mp4 to .mp3)
+pydub                    # Optional: working with audio files easily
+ffmpeg-python            # Python bindings for ffmpeg (used internally by whisper & moviepy)
+
+# === Token Counting (important for LLMs) ===
+tiktoken                 # Token counting utility, especially for OpenAI models
+
