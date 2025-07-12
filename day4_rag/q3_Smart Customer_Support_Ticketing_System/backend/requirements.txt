@@ -1,0 +1,26 @@
+# Core Dependencies
+langchain==0.2.16
+langchain-community==0.2.16
+langchain-core==0.2.38
+langchain-openai==0.1.25
+
+# Vector Store
+faiss-cpu==1.8.0
+
+# Database
+sqlalchemy==2.0.32
+
+# Web Scraping
+beautifulsoup4==4.12.3
+requests==2.32.3
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# Text Processing
+tiktoken==0.7.0
+
+# Optional: For development and testing
+pytest==8.3.2
+black==24.8.0
+flake8==7.1.1 
